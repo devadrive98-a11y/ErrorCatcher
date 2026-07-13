@@ -44,9 +44,6 @@ async def receive_error(request: Request):
 
     message = f"""
 {data.get("message")}
-StackTrace: {data.get("stackTrace")}
-Device: {data.get("device")}
-Time: {data.get("time")}
 """
 
     send_telegram(message)
