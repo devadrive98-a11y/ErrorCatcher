@@ -43,9 +43,7 @@ async def receive_error(request: Request):
     data = await request.json()
 
     message = f"""
-🚨 ERROR APP
-
-Message: {data.get("message")}
+{data.get("message")}
 StackTrace: {data.get("stackTrace")}
 Device: {data.get("device")}
 Time: {data.get("time")}
