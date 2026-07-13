@@ -26,7 +26,8 @@ def send_telegram(message: str):
     
     payload = {
         "chat_id": CHAT_ID,
-        "text": message
+        "text": message,
+        "parse_mode": "HTML"
     }
 
     requests.post(url, json=payload)
