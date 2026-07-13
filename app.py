@@ -42,9 +42,7 @@ def root():
 async def receive_error(request: Request):
     data = await request.json()
 
-    message = f"""
-{data.get("message")}
-"""
+    message = {data.get("message")}
 
     send_telegram(message)
 
