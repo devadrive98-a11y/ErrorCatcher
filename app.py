@@ -3,7 +3,9 @@ import requests
 import os
 
 app = FastAPI()
-
+@app.get("/")
+def root():
+    return {"status": "ok"}
 # isi dengan punyamu
 BOT_TOKEN = "8850208766:AAGbViUjrEMZ0dZpXgOu30c-dAJdgm3X4E8"
 CHAT_ID = "1007355104"
