@@ -18,8 +18,10 @@ app.add_middleware(
 def root():
     return {"status": "ok"}
 # isi dengan punyamu
-BOT_TOKEN = "8850208766:AAGbViUjrEMZ0dZpXgOu30c-dAJdgm3X4E8"
-CHAT_ID = "1007355104"
+
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 def send_telegram(message: str):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
